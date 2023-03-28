@@ -21,13 +21,13 @@ header {
   margin: 0;
   list-style: none;
 }
-.menu .menu_link {
+.menu_link {
   color: #ffffff;
   font-size: 15px;
   font-weight: 300;
   text-decoration: none;
 }
-.menu .menu_item {
+.menu_item {
   border-right: 2px dotted black;
   padding-right: 50px;
 }
@@ -39,26 +39,26 @@ header {
   height: 84px;
   background-color: rgba(0, 0, 0, 0.6);
 }
-.subheader .subheader_logo {
+.subheader_logo {
   display: block;
   max-width: 100%;
   margin-top: 16px;
 }
-.subheader .subheader_official {
+.subheader_official {
   opacity: 0.5;
   color: #ffffff;
   font-size: 13px;
   font-weight: 400;
   margin-top: 6px;
 }
-.subheader .subheader_call {
+.subheader_call {
   color: #ffffff;
   font-size: 12px;
   font-weight: 300;
   margin-top: 19px;
   text-align: right;
 }
-.subheader .subheader_phone {
+.subheader_phone {
   display: block;
   color: #ffffff;
   font-size: 22px;
@@ -68,7 +68,7 @@ header {
   line-height: 12px;
   text-decoration: none;
 }
-.subheader .subheader_btn {
+.subheader_btn {
   margin-top: 19px;
   width: 172px;
   height: 46px;
@@ -85,13 +85,17 @@ header {
   text-align: center;
   text-transform: uppercase;
 }
+.subheader_btn:hover {
+  background-image: none;
+  background-color: #1eacc7;
+}
 
 .promo {
   min-height: 800px;
   background: url("../img/main_jpg.jpg") center center/cover no-repeat;
   padding: 150px 0 135px 0;
 }
-.promo .promo_header {
+.promo_header {
   color: #ffffff;
   font-size: 60px;
   font-weight: 700;
@@ -99,7 +103,7 @@ header {
   line-height: 60px;
   margin: 0;
 }
-.promo .promo_subheader {
+.promo_subheader {
   color: #ffffff;
   font-size: 36px;
   font-weight: 700;
@@ -108,7 +112,7 @@ header {
   margin: 0;
   margin-top: 22px;
 }
-.promo .promo_descr {
+.promo_descr {
   color: #ffffff;
   font-size: 18px;
   font-weight: 400;
@@ -116,7 +120,7 @@ header {
   text-align: center;
   margin-top: 23px;
 }
-.promo .promo_btn {
+.promo_btn {
   display: block;
   margin: 118px auto 0 auto;
   width: 259px;
@@ -133,6 +137,10 @@ header {
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+}
+.promo_btn:hover {
+  background-image: none;
+  background-color: #1eacc7;
 }
 
 .reason {
@@ -291,11 +299,37 @@ header {
   border-radius: 100%;
   cursor: pointer;
 }
+.mobile_item_plus::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 2px;
+  background-color: #1eacc7;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.mobile_item_plus::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  height: 14px;
+  width: 2px;
+  background-color: #1eacc7;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.mobile_item_plus:hover::before, .mobile_item_plus:hover::after {
+  background-color: #ff5656;
+}
 
 .choice {
   position: relative;
   min-height: 895px;
   padding: 57px 0 138px 0;
+  background: url("../img/choise_background.jpg") center center/cover no-repeat;
 }
 .choice .black {
   position: absolute;
@@ -318,6 +352,80 @@ header {
   font-weight: 300;
   text-align: center;
   line-height: 24px;
+}
+
+.require {
+  padding: 68px 0 84px 0;
+}
+.require_block {
+  margin: 33px 0;
+}
+.require_block_nmb {
+  margin-bottom: 0;
+}
+.require_title {
+  color: #1ca8c3;
+  font-size: 22px;
+  font-weight: 400;
+}
+.require_text {
+  list-style-type: none;
+  padding-left: 50px;
+  margin-top: 22px;
+}
+.require_text li {
+  position: relative;
+  color: #222222;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.require_text li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -32px;
+  top: 3px;
+  width: 21px;
+  height: 20px;
+  background: url("../icons/conditions&requirement/blue_check.png") center center/cover no-repeat;
+}
+.require_descr {
+  margin-top: 25px;
+  color: #1ca8c3;
+  font-weight: 300;
+  line-height: 24px;
+}
+.require .warning .require_title {
+  color: #ff5656;
+}
+.require .warning .require_text li::before {
+  background: url("../icons/conditions&requirement/red_check.png") center center/cover no-repeat;
+}
+
+.worldwide {
+  position: relative;
+  min-height: 717px;
+  padding: 49px 0;
+  background: url("../img/worldwide.jpg") center center/cover no-repeat;
+}
+.worldwide_link {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 49px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 68px;
+  text-transform: uppercase;
+  color: #1fbad6;
+}
+.worldwide_link:hover {
+  text-decoration: none;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
